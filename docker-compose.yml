@@ -14,8 +14,7 @@ services:
     #   SERVICE_TAGS: dev
     working_dir: /home
     volumes:
-        - ./:/home
-        # - ./php/local.ini:/usr/local/etc/php/conf.ddo/local.ini
+        - ./work:/home
     networks:
       - app-network
 
