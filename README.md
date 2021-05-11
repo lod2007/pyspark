@@ -7,6 +7,10 @@
 В данном проекте решена задача по развертыванию на Докере образ Ubuntu с установленным Pyspark  2.4.7.
 В результате вы получите готовую среду для запуска скриптов Python для Spark.
 
+Ссылка на репозиторий:
+
+https://github.com/lod2007/pyspark
+
 Версии программ:
 ![WordPress Plugin Version](https://img.shields.io/badge/python-3.7-green)
 ![WordPress Plugin Version](https://img.shields.io/badge/spark-2.4.7-orange)
