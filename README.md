@@ -11,6 +11,10 @@
 
 https://github.com/lod2007/pyspark
 
+Ссылка на Docker conteiner:
+
+https://hub.docker.com/r/lod2007/pyspark
+
 Версии программ:
 ![WordPress Plugin Version](https://img.shields.io/badge/python-3.7-green)
 ![WordPress Plugin Version](https://img.shields.io/badge/spark-2.4.7-orange)
@@ -41,16 +45,17 @@ https://tuxrider.ru/guide/ustanovka-docker-compose-linux-mint-19/
   
 ## Example
   
-  Для запуска командной строки в нутри контейнера откройте терминал и запустите команду:
+  Для запуска командной строки внутри контейнера откройте терминал и запустите команду:
   
       docker exec -it pyspark bash
   
   В открывшемся терминале можете проверить:
   
       ls /home
-  В результатом будет имя вашего файла /work/my_script.py 
+      
+ В результатом будет имя вашего файла /work/my_script.py 
  
- В терминале проекта перейдите в каталог с проектом
+ В терминале контейнера перейдите в каталог с проектом
  
     cd /home
     
