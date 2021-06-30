@@ -14,7 +14,8 @@ RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update && apt-get install -y python3.7
 
 #Install Spark 2.4.7
-RUN wget -c -N https://apache-mirror.rbc.ru/pub/apache/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz && \
+#RUN wget -c -N https://apache-mirror.rbc.ru/pub/apache/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz && \
+RUN wget -c -N https://archive.apache.org/dist/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz && \
     cd / && tar xvz -f spark-2.4.7-bin-hadoop2.7.tgz -C / && \
     rm -f /spark-2.4.7-bin-hadoop2.7.tgz
 
