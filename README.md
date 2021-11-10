@@ -27,7 +27,28 @@ https://hub.docker.com/r/lod2007/pyspark
 Предварительно вы должны скачать и установить у себя Docker Engine и Docker Compose.
 Для установки на Linux Mint можно воспользоваться инструкцией:
 
-https://tuxrider.ru/guide/ustanovka-docker-compose-linux-mint-19/
+1. установка докера
+ 
+    sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+
+Импортитруем PGP-ключи
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Добавляем нужный репозиторий
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(. /etc/os-release; echo "$UBUNTU_CODENAME") stable"
+
+Обновляем списки репозиториев:
+    sudo apt-get update
+
+Устанавливаем Docker:
+    sudo apt-get -y  install docker-ce docker-compose
+
+После установки добавляем нашего текущего пользователя в группу docker
+    sudo usermod -aG docker $USER
+
+Проверка:
+    docker run hello-world
+
 
 Для получения копии этого проекта необходимо клонировать проект к себе на машину командой:
 
