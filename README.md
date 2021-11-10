@@ -9,11 +9,11 @@
 
 Ссылка на репозиторий:
 
-https://github.com/lod2007/pyspark
+[https://github.com/lod2007/pyspark]
 
 Ссылка на Docker conteiner:
 
-https://hub.docker.com/r/lod2007/pyspark
+[https://hub.docker.com/r/lod2007/pyspark]
 
 Версии программ:
 ![WordPress Plugin Version](https://img.shields.io/badge/python-3.7-green)
@@ -22,6 +22,7 @@ https://hub.docker.com/r/lod2007/pyspark
 ![WordPress Plugin Version](https://img.shields.io/badge/jdk-1.8.0_292-red)
 
 ## Установка Docker Engine и Docker Compose на Linux Mint
+
 Для установки на Linux Mint можно воспользоваться инструкцией.
 Предварительно вы должны скачать и установить у себя Docker Engine и Docker Compose.
 
@@ -49,13 +50,14 @@ https://hub.docker.com/r/lod2007/pyspark
 Run Hellow-world:
 
     docker run hello-world
+
 ## Приступая к работе (Getting started)
 
 Для получения копии этого проекта необходимо клонировать проект к себе на машину командой:
 
-    $ git clone https://github.com/lod2007/pyspark.git your_project
+    $git clone https://github.com/lod2007/pyspark.git your_project
 
-после скачивания, в корне проекта создайте папку: 
+после скачивания, в корне проекта создайте папку:
 
 **work** - она понадобиться для передачи py-файлов внутрь контейнера. Туда поместите свой my_script.py для Spark.
 
@@ -74,17 +76,15 @@ Run Hellow-world:
   В открывшемся терминале можете проверить:
   
       ls /home
-      
- В результатом будет имя вашего файла /work/my_script.py 
- 
+
+ В результатом будет имя вашего файла /work/my_script.py
+
  В терминале контейнера перейдите в каталог с проектом
- 
+
     cd /home
-    
+
  и запустите свой скрипт командой:
- 
+
     spark-submit my_script.py
-    
+
  результат выполнения отобразится тут же в терминале.
-   
-      
