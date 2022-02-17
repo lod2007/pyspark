@@ -45,6 +45,7 @@
     sudo apt-get -y  install docker-ce docker-compose
 
 После установки добавляем нашего текущего пользователя в группу docker
+    
     sudo usermod -aG docker $USER
 
 Run Hellow-world:
