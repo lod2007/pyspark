@@ -48,7 +48,7 @@
     
     sudo usermod -aG docker $USER
 
-Run Hellow-world:
+Проверяем, что Docker установился. Для этого запустим **Hello-world**:
 
     docker run hello-world
 
