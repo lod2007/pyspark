@@ -9,12 +9,10 @@ services:
     container_name: pyspark
     restart: unless-stopped
     tty: true
-    # environment:
-    #   SERVICE_NAME: app
-    #   SERVICE_TAGS: dev
-    working_dir: /home
+    working_dir: /db_home
     volumes:
-        - ./work:/home
+        - ./work:/work
+        - ./db_home:/db_home
     networks:
       - app-network
 

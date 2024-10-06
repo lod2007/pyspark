@@ -1,0 +1,3 @@
+*.log
+db_home/*
+*main.py
