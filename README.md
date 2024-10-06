@@ -9,11 +9,11 @@
 
 Ссылка на репозиторий:
 
-[https://github.com/lod2007/pyspark]
+https://github.com/lod2007/pyspark
 
 Ссылка на Docker conteiner:
 
-[https://hub.docker.com/r/lod2007/pyspark]
+https://hub.docker.com/r/lod2007/pyspark
 
 Версии программ:
 ![WordPress Plugin Version](https://img.shields.io/badge/python-3.7-green)
@@ -62,9 +62,9 @@
   - **work** предназначена для скриптов вашего проекта. От сюда будут запускаться скрипты для работы в Spark.
   - **db_home** предназначена для хранения метаданных Spark и сохранения БД и таблиц даже после остановки контейнера.
 
-## Запуск контейнера
+## Работа с контейнером
 
-В командной строке перейдите в каталог с проектом и запустите файл docker-compose.yml следующей командой (запуск контейнера в фоновом режиме):
+В командной строке перейдите в каталог с проектом и запустите файл **docker-compose.yml** следующей командой (флаг **-d** -  это запуск контейнера в фоновом режиме):
 ```
 docker-compose up -d
 ```
@@ -72,17 +72,17 @@ docker-compose up -d
 ```
 docker ps
 ```
-Чтобы остановить контенер, нужно из каталога проекта (где находитьс docker-compose.yml) выполнить команду:
+Чтобы остановить контейнер, нужно из каталога проекта (где находитьс docker-compose.yml) выполнить команду:
 ```
 docker-compose down
 ```
 
 
-## Example
+## Examples
 В проекте уже есть пример скрипта для запуска в Spark
 > /work/hello.py
 
-Из командной строки выполните команду:
+для его запуска выполните команду из консоли:
 ```
 docker exec -it pyspark spark-submit /work/hello.py
 ```
@@ -111,6 +111,11 @@ docker exec -it pyspark /bin/bash
 ```
 pyspark -c spark.sql.warehouse.dir=/db_home/warehouse
 ```
+либо запустить интерактивный pyspark с поддержкой локальных баз данных можно командой:
+```
+docker exec -it pyspark pyspark -c spark.sql.warehouse.dir=/db_home/warehouse
+```
+
 Посмотреть список баз данных:
 ```
 spark.sql("Show databases").show()
@@ -125,7 +130,7 @@ spark.sql("Show databases").show()
 ```
 посмотреть данные в таблице:
 ```bash
->>> spark.table("newdb.adress_age").show()
+spark.table("newdb.adress_age").show()
 ```
 Для выхода из консоли pyspark используйте **ctrl+d**.
 
@@ -137,4 +142,4 @@ exit
 Для получения прав root внутри контейнера используйте комманду:
 ``` 
 docker exec -it -u root:root pyspark /bin/bash
-```  
+``` 
